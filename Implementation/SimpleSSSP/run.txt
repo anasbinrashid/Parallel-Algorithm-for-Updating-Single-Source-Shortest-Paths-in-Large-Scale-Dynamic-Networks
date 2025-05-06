@@ -1,0 +1,9 @@
+mpirun -np 4 ./sssp_dynamic -f bio-CE-HT.edges -u bio-CE-HT_updates.edges -t 8 -c 200
+
+mpirun -np 1 ./sssp_dynamic --test
+
+
+// visualization:
+dot -Tpng social_network_initial.dot -o social_network_initial.png
+dot -Tpng social_network_final.dot -o social_network_final.png
+
